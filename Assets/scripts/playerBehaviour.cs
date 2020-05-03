@@ -1,36 +1,183 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
+/// <summary>
+/// TO DO LIST
+/// Add :
+///     Health
+///     AI
+///     Death condition
+///     Win condition
+///     time with endless mode
+/// Modifications :
+///     PostProcessing Enhancements
+///     Screenshake
+///     
+/// </summary>
 public class playerBehaviour : MonoBehaviour
 {
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int _currentHealth;
     [SerializeField] private KeyCode Dash;
 
-    [SerializeField] private float range;
-    [SerializeField] private float dashTime;
+    public GameObject[] healthUI = new GameObject[2];
 
+    private GameObject _trail;
+    private Camera _camera;
+
+    private int _dealt = 0;
+    private bool _dead = false;
+
+    void Start()
+    {
+        _camera = Camera.main;
+        _trail = transform.GetChild(0).gameObject;
+
+        //Initialisation of health stat and linked UI
+        _currentHealth = maxHealth;
+        foreach (var h in healthUI)
+        {
+            h.gameObject.SetActive(true);
+        }
+    }
     void Update()
     {
-        Vector3 mouseScreenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log($"Mouse Pos : ({mouseScreenPos.x},{mouseScreenPos.y})");
+        //UI and Health Gestion
+        int lackingHealth = maxHealth - _currentHealth;
 
-        //Rotation of the player facing the mouse Position (27 is an Offset)
-        if (Camera.main != null)
+        //Rotation of the player making it facing the mouse
+        Vector3 mouseScreenPos = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+        if (_camera != null)
         {
-            float Angle = 180 / Mathf.PI *
-                          Mathf.Atan2(mouseScreenPos.y - transform.position.y, mouseScreenPos.x - transform.position.x);
-            transform.rotation = Quaternion.Euler(0, 0, Angle + 27);
+            var dir = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
+            var angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
         }
         else
             throw new Exception("Camera doesn't exist :(");
-        
-        //Dash mechanic
+
+        //Dash at the mouse's position
         if (Input.GetKeyDown(Dash))
         {
-            Vector3 playRelative = mouseScreenPos - transform.position;
-            Vector3 lerp = Vector3.Lerp(transform.position, transform.position + playRelative.normalized * range, Time.deltaTime * dashTime);
-            transform.position = new Vector3(lerp.x, lerp.y, 0);
+            transform.DOMove(new Vector2(mouseScreenPos.x, mouseScreenPos.y), 0.25f);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        // Particle Gestion
+        if (other.gameObject.CompareTag("Ennemy"))
+        {
+            Destroy(other.gameObject);
+            GameObject oo = Instantiate(other.gameObject.GetComponent<ennemyBehaviour>().pS, other.transform.position,
+                Quaternion.identity);
+            oo.GetComponent<ParticleSystem>().Play();
+            Destroy(oo, 0.5f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // If Shot
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Damage();
+            Destroy(other.gameObject);
+        }
+
+        // If Picked Up Heal
+        if (other.gameObject.CompareTag("heal"))
+        {
+            Heal();
+            Destroy(other.gameObject);
+        }
+        
+        // If Picked Up Clock
+        if (other.gameObject.CompareTag("clock"))
+        {
+            StartCoroutine("slowTime", false);
+            Destroy(other.gameObject);
+        }
+    }
+
+    void Heal()
+    {
+        GameObject __hp2 = healthUI[0];
+        GameObject __hp1 = healthUI[1];
+
+        if (_dealt <= 0)
+            _dealt = 0;
+        else
+        {
+            switch (_dealt)
+            {
+                case 1:
+                    Debug.Log("Reached case 0");
+                    __hp2.SetActive(true);
+                    break;
+            }
+        }
+
+        _dealt -= 1;
+    }
+
+    void Damage()
+    {
+        GameObject __hp2 = healthUI[0];
+        GameObject __hp1 = healthUI[1];
+
+        _dealt += 1;
+
+        switch (_dealt)
+        {
+            case 1:
+                __hp2.SetActive(false);
+                break;
+            case 2:
+                __hp1.SetActive(false);
+                Death();
+                break;
+        }
+    }
+
+    private void Death()
+    {
+        _dead = true;
+        StartCoroutine("slowTime", true);
+        Debug.Log("Player is dead");
+        foreach (var b in GameObject.FindGameObjectsWithTag("Bullet"))
+        {
+            Destroy(b);
+        }
+    }
+
+    IEnumerator slowTime(bool d)
+    {
+        float slowRate = 0;
+        float min = 0;
+        if (d)
+            slowRate = 0.1f;
+        else
+        {
+            slowRate = 0.2f;
+            min = 0.2f;
+        }
+
+        for (float i = 1; i >= min; i -= slowRate)
+        {
+            Time.timeScale = i;
+            yield return new WaitForSecondsRealtime(0.2f);
+        }
+
+        if (!d)
+        {
+            yield return new WaitForSecondsRealtime(5f);
+            Time.timeScale = 1;
         }
     }
 }

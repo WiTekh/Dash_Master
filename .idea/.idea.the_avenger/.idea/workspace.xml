@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5111e68e-77aa-4530-8efa-b797a7110dba" name="Default Changelist" comment="" />
+    <list default="true" id="5111e68e-77aa-4530-8efa-b797a7110dba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ennemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ennemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FightScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FightScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/scripts/onPressed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/onPressed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/bulletBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/followPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ennemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ennemies_generator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3CE5FEA-CBDF-42D4-870C-1112992388EF/0e/82cde82c/Animation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/renderDistanceGestion.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -17,10 +40,21 @@
         <option value="$PROJECT_DIR$/Assets/scripts/onPressed.cs" />
         <option value="$PROJECT_DIR$/Assets/followPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/playerBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/ennemies_generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/ennemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScreenShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameObjects/bulletBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ennemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/bulletBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ennemies_generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/playerBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/renderDistanceGestion.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1auXdF7NwLiqttSiQWLL7MKLsWF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -32,6 +66,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,7 +106,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587586544947</updated>
-      <workItem from="1587586565862" duration="4716000" />
+      <workItem from="1587586565862" duration="4865000" />
+      <workItem from="1587596247298" duration="17667000" />
+      <workItem from="1587845371080" duration="18489000" />
+      <workItem from="1588413710926" duration="8376000" />
+      <workItem from="1588491256841" duration="1200000" />
     </task>
     <servers />
   </component>
@@ -80,6 +119,19 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
