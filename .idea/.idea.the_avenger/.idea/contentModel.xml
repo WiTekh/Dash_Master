@@ -18,6 +18,8 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="map_generator.cs" t="Include" />
+        <e p="roomInfos.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="bulletBehaviour.cs" t="Include" />
           <e p="ennemies_generator.cs" t="Include" />

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class ennemyBehaviour : MonoBehaviour
 {
@@ -13,12 +14,16 @@ public class ennemyBehaviour : MonoBehaviour
     private float fireRate;
     private float _nextFire = 0;
 
+    private float _fireRateBase;
+
     public float speed;
 
     private GameObject _player;
 
     private void Start()
     {
+        _fireRateBase = fireRate;
+        fireRate = _fireRateBase + (float) new Random().NextDouble() * 1.2f;
         _player = GameObject.FindWithTag("Player");
         _bullet = Resources.Load("bullet") as GameObject;
     }
@@ -42,6 +47,8 @@ public class ennemyBehaviour : MonoBehaviour
             Rigidbody2D __rb = __bullet.GetComponent<Rigidbody2D>();
             __rb.AddForce(__lookAtTarget);
             _nextFire = 0;
+            //Not the same firerate for each ennemies
+            fireRate = _fireRateBase + (float) new Random().NextDouble() * 1.2f;
         }
         else
         {

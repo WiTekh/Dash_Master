@@ -32,8 +32,14 @@ public class playerBehaviour : MonoBehaviour
     private int _dealt = 0;
     private bool _dead = false;
 
+    public bool dashUpped = false;
+
     void Start()
     {
+        //Getting the UI elements
+        healthUI[0] = GameObject.Find("health_01").gameObject;
+        healthUI[1] = GameObject.Find("health_02").gameObject;
+
         _camera = Camera.main;
         _trail = transform.GetChild(0).gameObject;
 
@@ -43,9 +49,16 @@ public class playerBehaviour : MonoBehaviour
         {
             h.gameObject.SetActive(true);
         }
+
+        gameObject.tag = "Player";
     }
     void Update()
     {
+        float dSize = 0.7f;
+
+        if (dashUpped)
+            dSize = 0.2f;
+        
         //UI and Health Gestion
         int lackingHealth = maxHealth - _currentHealth;
 
@@ -65,6 +78,8 @@ public class playerBehaviour : MonoBehaviour
         if (Input.GetKeyDown(Dash))
         {
             transform.DOMove(new Vector2(mouseScreenPos.x, mouseScreenPos.y), 0.25f);
+            StartCoroutine(backN());
+            transform.DOScale(new Vector3(dSize, 1), 0.1f);
         }
     }
 
@@ -101,6 +116,13 @@ public class playerBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("clock"))
         {
             StartCoroutine("slowTime", false);
+            Destroy(other.gameObject);
+        }
+        
+        // If Smol Upgrade
+        if (other.gameObject.CompareTag("smol"))
+        {
+            dashUpped = true;
             Destroy(other.gameObject);
         }
     }
@@ -179,5 +201,11 @@ public class playerBehaviour : MonoBehaviour
             yield return new WaitForSecondsRealtime(5f);
             Time.timeScale = 1;
         }
+    }
+
+    IEnumerator backN()
+    {
+        yield return new WaitForSeconds(0.25f);
+        transform.DOScale(new Vector3(1, 1), 0.05f);
     }
 }

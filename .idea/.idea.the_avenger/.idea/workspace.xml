@@ -4,16 +4,16 @@
     <list default="true" id="5111e68e-77aa-4530-8efa-b797a7110dba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.the_avenger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ennemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Ennemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FightScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FightScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FightScene_Profiles/GlobalPostProcessing Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FightScene_Profiles/GlobalPostProcessing Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +25,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/onPressed.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/bulletBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/followPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ennemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ennemies_generator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/onPressed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/bulletBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/followPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ennemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/map_generator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ennemies_generator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/roomInfos.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3CE5FEA-CBDF-42D4-870C-1112992388EF/0e/82cde82c/Animation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/renderDistanceGestion.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -43,13 +44,15 @@
         <option value="$PROJECT_DIR$/Assets/ennemies_generator.cs" />
         <option value="$PROJECT_DIR$/Assets/ennemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/ScreenShake.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/GameObjects/bulletBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ennemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/bulletBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ennemies_generator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/playerBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/renderDistanceGestion.cs" />
+        <option value="$PROJECT_DIR$/Assets/map_generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/playerBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/roomInfos.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +114,7 @@
       <workItem from="1587845371080" duration="18489000" />
       <workItem from="1588413710926" duration="8376000" />
       <workItem from="1588491256841" duration="1200000" />
+      <workItem from="1591006827710" duration="10387000" />
     </task>
     <servers />
   </component>
