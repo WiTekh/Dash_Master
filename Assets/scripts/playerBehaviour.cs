@@ -93,6 +93,7 @@ public class playerBehaviour : MonoBehaviour
                 Quaternion.identity);
             oo.GetComponent<ParticleSystem>().Play();
             Destroy(oo, 0.5f);
+            GameObject.Find("Score").GetComponent<scoreManager>().score += 100;
         }
     }
 
